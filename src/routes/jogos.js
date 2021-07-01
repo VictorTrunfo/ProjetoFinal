@@ -14,8 +14,12 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
     try{
         const id = req.params.id
-        const doc = await Jogo.findById(id)
-        res.json(doc)
+        let jogo = await Jogo.findById(id).populate('jogo')
+        if(!jogo){
+            res.statusCode = 404
+            throw new Error("O objeto procurado não foi encontrado")
+        }
+        res.json(jogo)
     } catch (err){
         next(err)
     }
