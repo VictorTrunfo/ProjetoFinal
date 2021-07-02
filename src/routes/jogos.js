@@ -27,7 +27,7 @@ router.get('/:id', async (req, res, next) => {
             throw new Error("O objeto procurado não foi encontrado")
         }
 
-        if(jogo.personagens){
+        if(jogo.personagens && req.query.render === "true"){
             try{
                 var personagens = await axios.get('https://pfinalppw2thiago.herokuapp.com/api/personagens/'+jogo.personagens)
                 if (personagens.status === 200) {
