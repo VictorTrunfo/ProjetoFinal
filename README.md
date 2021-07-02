@@ -1,5 +1,5 @@
 <h1>Projeto Final PPW 2</h1>
-<p>Disponível publicamente na URL: <a>https://pfinalppw2thiago.herokuapp.com/api/</a></p>
+<p>Disponível publicamente na URL: <a>https://pfinalppw2.herokuapp.com/api/</a></p>
 
 <h2>Estrutura dos recursos:</h2>
 

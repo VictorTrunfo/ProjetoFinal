@@ -29,9 +29,9 @@ router.get('/:id', async (req, res, next) => {
 
         if(jogo.personagens){
             try{
-                var personagens = await axios.get('http//localhost:8080/personagens/'+jogo.personagens)
+                var personagens = await axios.get('https://pfinalppw2thiago.herokuapp.com/api/personagens/'+jogo.personagens)
                 if (personagens.status === 200) {
-                    jogo.personagens = personagens.data
+                    jogo.personagens = personagens.data.nome
                 }
             } catch (err){
                 console.log('f')
